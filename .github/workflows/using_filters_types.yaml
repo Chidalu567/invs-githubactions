@@ -1,0 +1,17 @@
+name: about filters and types
+run-name: ${{github.actor}} is learning about filters and types
+on:
+  label:
+    types:
+      - created
+      - edited
+jobs:
+  created-edited-label:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: npm install -g bats
+      - run: bats -v
