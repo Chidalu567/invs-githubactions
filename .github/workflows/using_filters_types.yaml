@@ -1,0 +1,11 @@
+name: about filters and types
+run-name: ${{github.actor}} is learning about filters and types
+on:
+  label:
+    types:
+      - created
+      - edited
+jobs:
+  created-edited-label:
+    runs-on: ubuntu-latest
+
