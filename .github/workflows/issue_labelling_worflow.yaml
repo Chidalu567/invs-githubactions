@@ -1,0 +1,15 @@
+name: labelling issues
+run-name: ${{github.actor}} is opening an issue
+on:
+  issues:
+   types:
+    - opened
+jobs:
+  labelling-issues-opened:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GITHUB_TOKEN: ${{secrets.customToken}}
+          ISSUE_URL: ${{github.event.issue.html_url}}
+        run: gh issue edit $ISSUE_URL --add-label "triage"
+
