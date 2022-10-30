@@ -1,3 +1,3 @@
 
-var x = 0;
-console.log(x);
+var y = 0;
+console.log(y);
