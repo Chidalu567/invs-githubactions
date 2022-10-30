@@ -20,4 +20,4 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
-      - run: "::echo file=index.js, line=1 ::missing semicolon(;)"
+      - run: "::echo file=index.js, line=1 ::missing semicolon"
