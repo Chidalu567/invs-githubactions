@@ -12,11 +12,7 @@ on:
 
 jobs:
   check-bats-version:
-<<<<<<< HEAD
     runs-on: window-latest
-=======
-    runs-on: windows-latest
->>>>>>> f71f574a538b56300c559d389b5f328efdee30a6
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -25,3 +21,4 @@ jobs:
       - run: npm install hello-world
       - run: npm -v
       - run: echo "::error file=index.js,line=1::missing semicolon at line1"
+      - run: echo "##Markdown in github action workflow" >> GITHUB_MARKDOWN
